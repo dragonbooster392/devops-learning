@@ -158,13 +158,13 @@ docker images --no-trunc
 ### **Format Output:**
 ```bash
 # Custom format
-docker images --format "table { {.Repository} }\t{ {.Tag} }\t{ {.Size} }"
+docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}"
 
 # JSON format
-docker images --format json
+docker images --format json | jq
 
 # Only show repository and tag
-docker images --format "{ {.Repository} }:{ {.Tag} }"
+docker images --format "{{.Repository}}:{{.Tag}}"
 ```
 
 ---
