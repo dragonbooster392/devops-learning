@@ -177,9 +177,9 @@ docker images --format "{{.Repository}}:{{.Tag}}"
 docker image inspect nginx:alpine
 
 # Get specific information
-docker image inspect nginx:alpine --format='{ {.Architecture} }'
-docker image inspect nginx:alpine --format='{ {.Os} }'
-docker image inspect nginx:alpine --format='{ {.Size} }'
+docker image inspect nginx:alpine --format='{{.Architecture}}'
+docker image inspect nginx:alpine --format='{{.Os}}'
+docker image inspect nginx:alpine --format='{{.Size}}'
 ```
 
 **Inspect Output** (JSON format):
